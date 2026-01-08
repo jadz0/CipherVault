@@ -10,7 +10,13 @@ CipherVault is a secure command-line password vault written in Python. It allows
 - Simple and intuitive CLI interface
 - No plaintext secrets stored on disk
 - Cross-platform (Windows, macOS, Linux)
-
+  
+## 🔐 Security Design
+- The master password is never stored
+- Encryption keys are derived using PBKDF2 with 200,000 iterations
+- All vault data is encrypted at rest and authenticated to detect tampering
+- Password input is hidden using secure terminal prompts
+  
 ## 🛠️ Requirements
 - Python 3.9+
 - `cryptography` library
@@ -39,8 +45,3 @@ python CipherVault.py get -n gmail
 Delete an entry
 python CipherVault.py delete -n gmail
 ```
-## 🔐 Security Design
-- The master password is never stored
-- Encryption keys are derived using PBKDF2 with 200,000 iterations
-- All vault data is encrypted at rest and authenticated to detect tampering
-- Password input is hidden using secure terminal prompts
