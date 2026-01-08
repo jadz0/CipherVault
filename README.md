@@ -38,7 +38,7 @@ python CipherVault.py get -n gmail
 
 Delete an entry
 python CipherVault.py delete -n gmail
-
+```
 ## 🔐 Security Design
 - The master password is never stored
 - Encryption keys are derived using PBKDF2 with 500,000 iterations
