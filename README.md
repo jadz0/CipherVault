@@ -41,6 +41,6 @@ python CipherVault.py delete -n gmail
 ```
 ## 🔐 Security Design
 - The master password is never stored
-- Encryption keys are derived using PBKDF2 with 500,000 iterations
+- Encryption keys are derived using PBKDF2 with 200,000 iterations
 - All vault data is encrypted at rest and authenticated to detect tampering
 - Password input is hidden using secure terminal prompts
